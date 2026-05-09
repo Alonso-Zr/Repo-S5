@@ -8,20 +8,21 @@ package com.mycompany.simupato;
  *
  * @author sistemas
  */
-public class SuperDrone implements Drone {
-    
-    @Override
-    public void beep() {
-        System.out.println("Beep Beep");
+public class AdaptadorDrone implements Pato {
+    private Drone drone;
+
+    public AdaptadorDrone(Drone drone) {
+        this.drone = drone;
     }
 
     @Override
-    public void girarRotor() {
-        System.out.println("Rotor girando");
+    public void cuaquear() {
+        drone.beep();
     }
 
     @Override
-    public void despegar() {
-        System.out.println("Drone despegando");
+    public void volar() {
+        drone.despegar();
+        drone.girarRotor();
     }
 }

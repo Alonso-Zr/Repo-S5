@@ -9,5 +9,6 @@ package com.mycompany.simupato;
  * @author sistemas
  */
 public interface Pato {
-    
+    public void cuaquear();
+    public void volar();
 }
