@@ -8,9 +8,24 @@ package com.mycompany.simupato;
  *
  * @author sistemas
  */
-public class PatoAdaptadorDemo {
 
+public class PatoAdaptadorDemo {
+    
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        Drone miSuperDrone = new SuperDrone();
+        
+        
+        Pato adaptadorDrone = new AdaptadorDrone(miSuperDrone);
+
+        System.out.println("El adaptador drone hace...");
+        
+        testPato(adaptadorDrone);
+    }
+
+   
+    static void testPato(Pato pato) {
+        pato.cuaquear();
+        pato.volar();
     }
 }
